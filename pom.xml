@@ -11,8 +11,13 @@
     <groupId>guru.springframework</groupId>
     <artifactId>pet-clinic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>pet-clinic</name>
     <description>pet-clinic</description>
+    <modules>
+        <module>pet-clinic-data</module>
+        <module>pet-clinic-web</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
