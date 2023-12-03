@@ -1,11 +1,20 @@
 package guru.springframework.petclinic.model;
 
-import java.time.LocalDate;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
+import java.time.LocalDate;
+@Entity
 public class Pet extends BaseEntity{
+    @Column(name = "name")
     private String name;
+    @ManyToOne
     private PetType petType;
+    @ManyToOne
     private Owner owner;
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
     public String getName() {
