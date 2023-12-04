@@ -19,7 +19,7 @@ public class Owner extends Person{
         this.city = city;
         this.telephone = telephone;
     }
-     
+
     @Column(name = "address")
     private String address;
     @Column(name = "city")
