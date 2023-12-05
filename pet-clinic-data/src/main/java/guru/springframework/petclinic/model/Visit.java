@@ -7,6 +7,7 @@ import jakarta.persistence.Table;
 import lombok.*;
 
 import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @Table(name = "visits")
-public class Visit extends BaseEntity{
+public class Visit extends BaseEntity {
     @Column(name = "date")
     private LocalDate date;
     @Column(name = "description")
@@ -22,4 +23,7 @@ public class Visit extends BaseEntity{
     @ManyToOne
     private Pet pet;
 
+    public LocalDate getDate() {
+        return date;
+    }
 }
